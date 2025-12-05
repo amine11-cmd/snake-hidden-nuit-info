@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For The Win | Solutions Digitales Innovantes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>"
+    />
+  </head>
+  <body>
+    <!-- Background 3D -->
+    <div id="threejs-background"></div>
+
+    <!-- Effets de particules -->
+    <div class="particles-container"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+      <div class="nav-container">
+        <div class="logo-wrapper" id="secret-logo">
+          <svg class="logo-svg" width="60" height="60" viewBox="0 0 100 100">
+            <!-- Nouveau design du logo FTW -->
+            <path
+              class="logo-path"
+              d="M20,50 Q40,20 60,50 T100,50"
+              stroke="#FF6B6B"
+              stroke-width="3"
+              fill="none"
+            />
+            <circle class="logo-dot" cx="20" cy="50" r="4" fill="#4ECDC4" />
+            <circle class="logo-dot" cx="60" cy="50" r="4" fill="#FFD166" />
+            <!-- Ajout d'un troisième point pour FTW -->
+            <circle class="logo-dot" cx="80" cy="50" r="4" fill="#6C63FF" />
+          </svg>
+          <span class="logo-text"
+            >FOR THE WIN<span class="logo-sub">✰</span></span
+          >
+        </div>
+
+        <ul class="nav-menu">
+          <li>
+            <a href="#home" class="nav-link"
+              ><i class="fas fa-home"></i> <span>Accueil</span></a
+            >
+          </li>
+          <li>
+            <a href="#services" class="nav-link"
+              ><i class="fas fa-cogs"></i> <span>Services</span></a
+            >
+          </li>
+          <li>
+            <a href="#quiz-section" class="nav-link"
+              ><i class="fas fa-question-circle"></i>
+              <span>Quiz Secrets</span></a
+            >
+          </li>
+          <li>
+            <a href="#team" class="nav-link"
+              ><i class="fas fa-users"></i> <span>Équipe</span></a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link"
+              ><i class="fas fa-envelope"></i> <span>Contact</span></a
+            >
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          <div class="secret-indicator">
+            <span class="secret-count">0</span>
+            <i class="fas fa-key"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="title-line">RÉINVENTONS</span>
+          <span class="title-line highlight">LE DIGITAL</span>
+          <span class="title-line">ENSEMBLE</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Chez <strong>For The Win</strong>, nous transformons vos idées les
+          plus audacieuses en expériences digitales mémorables.
+          <span class="blink">|</span>
+        </p>
+
+        <div class="hero-cta">
+          <button class="cta-btn primary" id="cta-primary">
+            <span>Commencer l'aventure</span>
+            <i class="fas fa-rocket"></i>
+          </button>
+          <button class="cta-btn secondary" id="secret-btn">
+            <span>Découvrir le secret</span>
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number" data-count="150">0</div>
+            <div class="stat-label">Projets</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-count="98">0</div>
+            <div class="stat-label">Satisfaction</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-count="24">0</div>
+            <div class="stat-label">Innovations</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-count="7">0</div>
+            <div class="stat-label">Secrets</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="floating-elements">
+          <div class="cube"></div>
+          <div class="pyramid"></div>
+          <div class="sphere"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          NOS <span class="highlight">EXPERTISES</span>
+        </h2>
+        <p class="section-subtitle">
+          Des solutions sur mesure pour chaque défi
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-service="web">
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Développement Web</h3>
+          <p>Applications performantes avec les dernières technologies</p>
+          <div class="service-tech">
+            <span>React</span>
+            <span>Vue.js</span>
+            <span>Node.js</span>
+          </div>
+        </div>
+
+        <div class="service-card" data-service="mobile">
+          <div class="service-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>Applications Mobile</h3>
+          <p>Apps natives et cross-platform intuitives</p>
+          <div class="service-tech">
+            <span>Flutter</span>
+            <span>React Native</span>
+            <span>Swift</span>
+          </div>
+        </div>
+
+        <div class="service-card" data-service="ai">
+          <div class="service-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Intelligence Artificielle</h3>
+          <p>Solutions IA et Machine Learning personnalisées</p>
+          <div class="service-tech">
+            <span>TensorFlow</span>
+            <span>Python</span>
+            <span>OpenAI</span>
+          </div>
+        </div>
+
+        <div class="service-card" data-service="blockchain">
+          <div class="service-icon">
+            <i class="fas fa-link"></i>
+          </div>
+          <h3>Blockchain</h3>
+          <p>Technologies décentralisées et smart contracts</p>
+          <div class="service-tech">
+            <span>Solidity</span>
+            <span>Web3</span>
+            <span>NFT</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Quiz Secrets -->
+    <section id="quiz-section" class="quiz-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          DÉFIS <span class="highlight">SECRETS</span>
+        </h2>
+        <p class="section-subtitle">
+          Résolvez les énigmes pour débloquer des secrets
+        </p>
+      </div>
+
+      <div class="quiz-container">
+        <!-- Quiz Drag & Drop -->
+        <div class="quiz-card drag-drop-quiz">
+          <h3><i class="fas fa-arrows-alt"></i> ASSEMBLEZ LE CODE</h3>
+          <p class="quiz-instruction">
+            Glissez les éléments dans le bon ordre pour former un code secret
+          </p>
+
+          <div class="drag-container">
+            <div class="drag-elements">
+              <div class="drag-item" draggable="true" data-order="1">C</div>
+              <div class="drag-item" draggable="true" data-order="2">O</div>
+              <div class="drag-item" draggable="true" data-order="3">D</div>
+              <div class="drag-item" draggable="true" data-order="4">E</div>
+              <div class="drag-item" draggable="true" data-order="5">7</div>
+              <div class="drag-item" draggable="true" data-order="6">2</div>
+              <div class="drag-item" draggable="true" data-order="7">1</div>
+            </div>
+
+            <div class="drop-zone">
+              <div class="drop-slot" data-slot="1">1</div>
+              <div class="drop-slot" data-slot="2">2</div>
+              <div class="drop-slot" data-slot="3">3</div>
+              <div class="drop-slot" data-slot="4">4</div>
+              <div class="drop-slot" data-slot="5">5</div>
+              <div class="drop-slot" data-slot="6">6</div>
+              <div class="drop-slot" data-slot="7">7</div>
+            </div>
+          </div>
+
+          <button class="quiz-submit" id="drag-submit">VÉRIFIER LE CODE</button>
+          <div class="quiz-feedback" id="drag-feedback"></div>
+        </div>
+
+        <!-- Quiz QCM -->
+        <div class="quiz-card qcm-quiz">
+          <h3><i class="fas fa-list-ul"></i> QCM SECRET</h3>
+          <p class="quiz-instruction">
+            Répondez correctement aux 3 questions pour débloquer un secret
+          </p>
+
+          <div class="qcm-questions">
+            <div class="qcm-question">
+              <p>
+                1. Quelle est la signification de "FTW" en langage internet ?
+              </p>
+              <div class="qcm-options">
+                <label>
+                  <input type="radio" name="q1" value="a" /> For The Win
+                </label>
+                <label>
+                  <input type="radio" name="q1" value="b" /> Forever Together
+                  Worldwide
+                </label>
+                <label>
+                  <input type="radio" name="q1" value="c" /> Future Tech World
+                </label>
+              </div>
+            </div>
+
+            <div class="qcm-question">
+              <p>
+                2. Quel langage est principalement utilisé pour le développement
+                web côté serveur chez FTW ?
+              </p>
+              <div class="qcm-options">
+                <label>
+                  <input type="radio" name="q2" value="a" /> Python
+                </label>
+                <label>
+                  <input type="radio" name="q2" value="b" /> JavaScript
+                  (Node.js)
+                </label>
+                <label> <input type="radio" name="q2" value="c" /> Java </label>
+              </div>
+            </div>
+
+            <div class="qcm-question">
+              <p>
+                3. Quel est le secret pour activer le jeu caché sur ce site ?
+              </p>
+              <div class="qcm-options">
+                <label>
+                  <input type="radio" name="q3" value="a" /> Cliquer 3 fois sur
+                  le logo
+                </label>
+                <label>
+                  <input type="radio" name="q3" value="b" /> Taper "SNAKE" au
+                  clavier
+                </label>
+                <label>
+                  <input type="radio" name="q3" value="c" /> Appuyer sur F12
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <button class="quiz-submit" id="qcm-submit">
+            VALIDER LES RÉPONSES
+          </button>
+          <div class="quiz-feedback" id="qcm-feedback"></div>
+        </div>
+
+        <!-- Quiz Puzzle -->
+        <div class="quiz-card puzzle-quiz">
+          <h3><i class="fas fa-puzzle-piece"></i> PUZZLE DIGITAL</h3>
+          <p class="quiz-instruction">
+            Sélectionnez la bonne réponse en fonction de la séquence
+          </p>
+
+          <div class="puzzle-container">
+            <div class="puzzle-sequence">
+              <div class="sequence-item active">F</div>
+              <div class="sequence-item">T</div>
+              <div class="sequence-item">W</div>
+              <div class="sequence-item">?</div>
+            </div>
+
+            <p class="puzzle-question">
+              Quel est le quatrième élément de la séquence logique ?
+            </p>
+
+            <div class="puzzle-options">
+              <button class="puzzle-option" data-answer="1">A</button>
+              <button class="puzzle-option" data-answer="2">S</button>
+              <button class="puzzle-option" data-answer="3">N</button>
+              <button class="puzzle-option" data-answer="4">G</button>
+            </div>
+          </div>
+
+          <div class="quiz-feedback" id="puzzle-feedback"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secret Activation Panel -->
+    <div class="secret-panel">
+      <div class="sequence-display">
+        <div class="sequence-key" data-key="S">S</div>
+        <div class="sequence-key" data-key="N">N</div>
+        <div class="sequence-key" data-key="A">A</div>
+        <div class="sequence-key" data-key="K">K</div>
+        <div class="sequence-key" data-key="E">E</div>
+      </div>
+      <div class="hint-text">
+        <i class="fas fa-lightbulb"></i>
+        <span>Trouvez la séquence...</span>
+      </div>
+    </div>
+
+    <!-- Modal du Jeu -->
+    <div class="game-modal">
+      <div class="game-container">
+        <div class="game-header">
+          <div class="game-title">
+            <h2><i class="fas fa-gamepad"></i> HIDDEN SNAKE DELUXE</h2>
+            <div class="difficulty-selector">
+              <button class="diff-btn active" data-diff="easy">Facile</button>
+              <button class="diff-btn" data-diff="medium">Moyen</button>
+              <button class="diff-btn" data-diff="hard">Difficile</button>
+              <button class="diff-btn" data-diff="extreme">Extrême</button>
+            </div>
+          </div>
+
+          <div class="game-controls">
+            <div class="score-board">
+              <div class="score-item">
+                <span>SCORE</span>
+                <div class="score-value" id="current-score">0</div>
+              </div>
+              <div class="score-item">
+                <span>MEILLEUR</span>
+                <div class="score-value" id="high-score">0</div>
+              </div>
+              <div class="score-item">
+                <span>NIVEAU</span>
+                <div class="score-value" id="current-level">1</div>
+              </div>
+            </div>
+
+            <div class="action-buttons">
+              <button class="game-btn" id="pause-btn">
+                <i class="fas fa-pause"></i>
+              </button>
+              <button class="game-btn" id="sound-btn">
+                <i class="fas fa-volume-up"></i>
+              </button>
+              <button class="game-btn" id="fullscreen-btn">
+                <i class="fas fa-expand"></i>
+              </button>
+              <button
+                class="game-btn"
+                id="resolution-btn"
+                title="Changer la résolution"
+              >
+                <i class="fas fa-desktop"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-area">
+          <canvas id="game-canvas" width="800" height="500"></canvas>
+
+          <div class="powerups-display">
+            <div class="powerup" data-type="speed">
+              <i class="fas fa-bolt"></i>
+              <span>x2</span>
+            </div>
+            <div class="powerup" data-type="shield">
+              <i class="fas fa-shield-alt"></i>
+              <span>3</span>
+            </div>
+            <div class="powerup" data-type="time">
+              <i class="fas fa-clock"></i>
+              <span>+10s</span>
+            </div>
+          </div>
+
+          <div class="boss-health" id="boss-health-bar">
+            <div class="health-bar">
+              <div class="health-fill"></div>
+            </div>
+            <span class="boss-name">BOSS FINAL</span>
+          </div>
+        </div>
+
+        <div class="game-instructions">
+          <div class="instruction">
+            <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd>
+            <span>Déplacer le serpent</span>
+          </div>
+          <div class="instruction">
+            <kbd>SPACE</kbd>
+            <span>Activer power-up</span>
+          </div>
+          <div class="instruction">
+            <kbd>R</kbd>
+            <span>Changer résolution</span>
+          </div>
+          <div class="instruction">
+            <kbd>ESC</kbd>
+            <span>Quitter le jeu</span>
+          </div>
+        </div>
+
+        <!-- Menu de résolution -->
+        <div class="resolution-menu">
+          <h4>RÉSOLUTION DU JEU</h4>
+          <div class="resolution-options">
+            <button
+              class="resolution-btn active"
+              data-width="800"
+              data-height="500"
+            >
+              800x500
+            </button>
+            <button class="resolution-btn" data-width="1000" data-height="600">
+              1000x600
+            </button>
+            <button class="resolution-btn" data-width="1200" data-height="700">
+              1200x700
+            </button>
+            <button class="resolution-btn" data-width="600" data-height="400">
+              600x400
+            </button>
+          </div>
+          <div class="resolution-info">
+            <span id="current-resolution">800x500</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="close-game">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- Easter Egg Messages -->
+    <div class="easter-egg-message" id="egg-1">
+      <div class="egg-content">
+        <h3><i class="fas fa-star"></i> SECRET DÉCOUVERT!</h3>
+        <p>
+          Vous avez trouvé le premier indice. Continuez votre exploration...
+        </p>
+      </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <!-- Audio Elements - Version fichiers .wav locaux -->
+    <audio id="bg-music" loop preload="auto">
+      <source src="audio/bg-music.wav" type="audio/wav" />
+      <source src="audio/bg-music.mp3" type="audio/mpeg" />
+      <!-- Fallback MP3 -->
+      Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+
+    <audio id="snake-eat" preload="auto">
+      <source src="audio/snake-eat.wav" type="audio/wav" />
+    </audio>
+
+    <audio id="powerup-sound" preload="auto">
+      <source src="audio/powerup.wav" type="audio/wav" />
+    </audio>
+
+    <audio id="secret-sound" preload="auto">
+      <source src="audio/secret.wav" type="audio/wav" />
+    </audio>
+
+    <audio id="hover-sound" preload="auto">
+      <source src="audio/hover.wav" type="audio/wav" />
+    </audio>
+
+    <audio id="click-sound" preload="auto">
+      <source src="audio/click.wav" type="audio/wav" />
+    </audio>
+
+    <audio id="game-start" preload="auto">
+      <source src="audio/game-start.wav" type="audio/wav" />
+    </audio>
+
+    <audio id="game-over" preload="auto">
+      <source src="audio/game-over.wav" type="audio/wav" />
+    </audio>
+
+    <audio id="boss-defeat" preload="auto">
+      <source src="audio/boss-defeat.wav" type="audio/wav" />
+    </audio>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
